@@ -18,7 +18,7 @@ driver.get('https://www.taobao.com')
 driver.find_element(By.CLASS_NAME, "btn-login").click()
 
 print(f"扫码登录")
-time.sleep(10)
+time.sleep(20)
 
 driver.get("https://cart.taobao.com/cart.html")
 
@@ -34,11 +34,11 @@ while 1==1:
     if now > times:
         while 1==1:
             try:
-                if driver.find_element(By.CLASS_NAME, "J_CheckBoxShop"):
+                if driver.find_element(By.CLASS_NAME, "submit-btn"):
                     print("here")
-                    driver.find_element(By.CLASS_NAME, "J_CheckBoxShop").click()
+                    driver.find_element(By.CLASS_NAME, "submit-btn").click()
                     print("已经抢到商品啦")
                     break
             except:
                 pass
-            
+
